@@ -12,7 +12,7 @@ function StatDC(L,b,E,h,g0)
     kmInt = matlabFunction(diff(modeFun(x),4) * modeFun(x));
     km = integral(kmInt,0,1);
     disp(kmInt);
-    for vDCi1 = 0.1:0.1:20
+    for vDCi1 = 0.1:0.05:20
         ke = alpha* (vDCi^2) * ((1-ws)^-3) * integral((modeFunSq),0,1);
         F = alpha*(vDCi1^2-vDCi^2)*((1-ws)^-2)*integral(modeFun,0,1);
         if(km-ke > 0)
