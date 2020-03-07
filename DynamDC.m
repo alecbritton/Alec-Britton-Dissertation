@@ -12,9 +12,9 @@ modeFunSq = ((sin(lambda.*x) - sinh(lambda.*x)) + alpha_n * (cos(lambda.*x) - co
 a1 = E*I*sum(differentiate(modeFun,4).*modeFun.*dx);
 a2 = rho*A*sum(modeFunSq*dx);
 a3 = c*sum(modeFunSq*dx);
-a4 = e0*b*Vdc*0.5*(1/(1-w)^2)*sum(modeFun.*dx);
+a4 = e0*b*Vdc^2*0.5*sum((1/(1-w)^2).*modeFun.*dx);
 
-t = 0:0.1:3;
+t = 0:0.5:3;
 u0 = 0;
 uDot0 = 0;
 
